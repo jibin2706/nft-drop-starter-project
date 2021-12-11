@@ -35,10 +35,6 @@ const CandyMachine = ({ walletAddress }) => {
   const [isLoadingMints, setIsLoadingMints] = useState(false);
   const [showMintButton, setShowMintButton] = useState(false);
 
-  useEffect(() => {
-    getCandyMachineState();
-  }, []);
-
   // Actions
   const fetchHashTable = async (hash, metadataEnabled) => {
     const connection = new web3.Connection(
@@ -354,6 +350,11 @@ const CandyMachine = ({ walletAddress }) => {
 
     return <p>{`Drop Date: ${machineStats.goLiveDateTimeString}`}</p>;
   };
+
+  useEffect(() => {
+    getCandyMachineState();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const isSoldOut =
     machineStats?.itemsRedeemed === machineStats?.itemsAvailable;
