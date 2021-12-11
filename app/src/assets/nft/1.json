@@ -1,0 +1,19 @@
+{
+  "name": "Ivysaur",
+  "symbol": "#002",
+  "image": "1.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "1.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "76j2ZRpyMS5v2VWF6FEscfFFcNHf6p1pM7sVY5KZhmJ6",
+        "share": 100
+      }
+    ]
+  }
+}
